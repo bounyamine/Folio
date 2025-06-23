@@ -221,7 +221,7 @@ window.addEventListener('load', () => {
     const originalText = subtitle.textContent;
     const loader = document.getElementById('loader');
     loader.style.opacity = '0';
-    setTimeout(() => loader.remove(), 5000);
+    setTimeout(() => loader.remove(), 500);
     setTimeout(() => {
         typeWriter(subtitle, originalText, 80);
     }, 1000);
