@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f4bb.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Bounyamine Ousmanou - Développeur Full Stack</title>
+    
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">BO</div>
+            <button class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link" onclick="closeMenu()">Accueil</a></li>
+                <li><a href="#about" class="nav-link" onclick="closeMenu()">À propos</a></li>
+                <li><a href="#services" class="nav-link" onclick="closeMenu()">Services</a></li>
+                <li><a href="#portfolio" class="nav-link" onclick="closeMenu()">Portfolio</a></li>
+                <li><a href="#contact" class="nav-link" onclick="closeMenu()">Contact</a></li>
+                <li><button class="theme-toggle" onclick="toggleTheme()">🌙</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Bounyamine Ousmanou</h1>
+                <p class="subtitle">Développeur Full Stack avec 5 ans d'expérience</p>
+                <p class="description">
+                    Je transforme vos idées en applications web et mobile performantes. 
+                    Spécialisé dans React, Node.js et les technologies modernes pour créer des expériences utilisateur exceptionnelles.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#portfolio" class="btn btn-primary">Voir mes projets</a>
+                    <a href="#contact" class="btn btn-outline">Me contacter</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section fade-in-section">
+        <div class="container">
+            <h2 class="section-title fade-in">À propos de moi</h2>
+            <p class="section-subtitle fade-in">Passionné par le développement et l'innovation technologique</p>
+            
+            <div class="about-content fade-in">
+                <div class="about-image">
+                    <img src="/img/profil.png" alt="Bounyamine Ousmanou" class="profile-img">
+                </div>
+                <div class="about-text">
+                    <h3>Développeur passionné et créatif</h3>
+                    <p>
+                        Avec plus de 5 ans d'expérience dans le développement web et mobile, 
+                        je me spécialise dans la création d'applications modernes et performantes. 
+                        Mon expertise couvre l'ensemble du stack technologique, du front-end au back-end.
+                    </p>
+                    <p>
+                        J'ai eu la chance de travailler avec des startups innovantes et des entreprises établies, 
+                        en livrant des solutions sur mesure qui répondent aux besoins spécifiques de chaque client. 
+                        Mon approche combine excellence technique et expérience utilisateur optimale.
+                    </p>
+                    <div class="skills">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">React Native</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <!-- <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">GraphQL</span>
+                        <span class="skill-tag">Docker</span> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section fade-in-section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <h2 class="section-title fade-in">Mes Services</h2>
+            <p class="section-subtitle fade-in">Des solutions complètes pour tous vos besoins digitaux</p>
+            
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">💻</div>
+                    <h3>Développement Web</h3>
+                    <p>Applications web modernes et responsives utilisant les dernières technologies comme React, Vue.js et Node.js.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">📱</div>
+                    <h3>Applications Mobile</h3>
+                    <p>Applications natives et cross-platform avec React Native et Flutter pour iOS et Android.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">⚡</div>
+                    <h3>API & Backend</h3>
+                    <p>Architectures robustes et scalables avec Node.js, Express, et bases de données modernes.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">🎨</div>
+                    <h3>UI/UX Design</h3>
+                    <p>Conception d'interfaces utilisateur intuitives et d'expériences engageantes.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">☁️</div>
+                    <h3>Cloud & DevOps</h3>
+                    <p>Déploiement et gestion d'applications sur AWS, Azure et Google Cloud Platform.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">🔧</div>
+                    <h3>Maintenance & Support</h3>
+                    <p>Support technique continu et maintenance évolutive de vos applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section fade-in-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Portfolio</h2>
+            <p class="section-subtitle fade-in">Découvrez quelques-uns de mes projets récents</p>
+            
+            <div class="portfolio-filters fade-in">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item fade-in" data-category="web fullstack">
+                    <div class="portfolio-image"></div>
+                    <div class="portfolio-content">
+                        <h3>E-commerce Platform</h3>
+                        <p>Plateforme e-commerce complète avec gestion des commandes, paiements et dashboard admin.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Stripe</span>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="#" class="portfolio-link">Voir le projet</a>
+                            <a href="#" class="portfolio-link">Code source</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item fade-in" data-category="mobile">
+                    <div class="portfolio-image"></div>
+                    <div class="portfolio-content">
+                        <h3>TaskManager Mobile</h3>
+                        <p>Application mobile de gestion de tâches avec synchronisation cloud et notifications push.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Redux</span>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="#" class="portfolio-link">App Store</a>
+                            <a href="#" class="portfolio-link">Play Store</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item fade-in" data-category="web">
+                    <div class="portfolio-image"></div>
+                    <div class="portfolio-content">
+                        <h3>Dashboard Analytics</h3>
+                        <p>Tableau de bord analytics en temps réel avec visualisations interactives et exports de données.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">D3.js</span>
+                            <span class="tech-tag">WebSocket</span>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="#" class="portfolio-link">Voir le projet</a>
+                            <a href="#" class="portfolio-link">Démo live</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item fade-in" data-category="fullstack">
+                    <div class="portfolio-image"></div>
+                    <div class="portfolio-content">
+                        <h3>Social Network Platform</h3>
+                        <p>Réseau social avec messagerie en temps réel, partage de contenu et système de recommandations.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">GraphQL</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="#" class="portfolio-link">Voir le projet</a>
+                            <a href="#" class="portfolio-link">Documentation</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item fade-in" data-category="mobile web">
+                    <div class="portfolio-image"></div>
+                    <div class="portfolio-content">
+                        <h3>Fitness Tracker App</h3>
+                        <p>Application de suivi fitness avec plans d'entraînement personnalisés et suivi de progression.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Machine Learning</span>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="#" class="portfolio-link">Télécharger</a>
+                            <a href="#" class="portfolio-link">Version web</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item fade-in" data-category="web fullstack">
+                    <div class="portfolio-image"></div>
+                    <div class="portfolio-content">
+                        <h3>Learning Management System</h3>
+                        <p>Plateforme d'apprentissage en ligne avec cours vidéo, quiz interactifs et certificats.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">Prisma</span>
+                            <span class="tech-tag">AWS S3</span>
+                            <span class="tech-tag">Stripe</span>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="#" class="portfolio-link">Voir le projet</a>
+                            <a href="#" class="portfolio-link">Case study</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section fade-in-section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <h2 class="section-title fade-in">Mon Processus</h2>
+            <p class="section-subtitle fade-in">Une approche méthodique pour garantir le succès de votre projet</p>
+            
+            <div class="process-steps">
+                <div class="process-step fade-in">
+                    <div class="step-number">1</div>
+                    <h3>Analyse & Planification</h3>
+                    <p>Étude approfondie de vos besoins, analyse du marché et définition d'une stratégie claire pour votre projet.</p>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="step-number">2</div>
+                    <h3>Design & Prototypage</h3>
+                    <p>Création de maquettes interactives et validation de l'expérience utilisateur avant le développement.</p>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="step-number">3</div>
+                    <h3>Développement</h3>
+                    <p>Codage avec les meilleures pratiques, tests réguliers et communication continue sur l'avancement.</p>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="step-number">4</div>
+                    <h3>Déploiement & Suivi</h3>
+                    <p>Mise en production optimisée, formation utilisateurs et maintenance continue pour assurer la performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section fade-in-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Témoignages</h2>
+            <p class="section-subtitle fade-in">Ce que disent mes clients</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-text">
+                        Alexandre a transformé notre vision en une application exceptionnelle. Son expertise technique 
+                        et sa compréhension des besoins business ont fait toute la différence. Je le recommande vivement !
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">OS</div>
+                        <div class="author-info">
+                            <h4>Oumarou Sanda</h4>
+                            <span>CEO, SaareTech</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-text">
+                        Un développeur d'exception ! Alexandre a livré notre projet mobile dans les délais avec une qualité 
+                        remarquable. Son approche professionnelle et sa créativité ont dépassé nos attentes.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MM</div>
+                        <div class="author-info">
+                            <h4>Mohamadou Moussa</h4>
+                            <span>Directeur Technique, InnovateCorp</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-text">
+                        Collaboration parfaite du début à la fin. Alexandre sait écouter, conseiller et livrer. 
+                        Notre plateforme e-commerce génère maintenant 3x plus de conversions qu'avant !
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">NA</div>
+                        <div class="author-info">
+                            <h4>Nouga Ange</h4>
+                            <span>Fondatrice, ShopOnline</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section fade-in-section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <h2 class="section-title fade-in">Contactez-moi</h2>
+            <p class="section-subtitle fade-in">Prêt à donner vie à votre projet ? Parlons-en !</p>
+            
+            <div class="contact-content">
+                <div class="contact-form fade-in">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nom *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Sujet</label>
+                            <input type="text" id="subject" name="subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required placeholder="Décrivez votre projet..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Envoyer le message</button>
+                    </form>
+                </div>
+                
+                <div class="contact-info fade-in">
+                    <h3>Restons en contact</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <strong>Email</strong><br>
+                            ousmanoubounyamine@email.com
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div>
+                            <strong>Téléphone</strong><br>
+                            +237 6 93 01 03 11
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <strong>Localisation</strong><br>
+                            Maroua, Cameroun
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💼</div>
+                        <div>
+                            <strong>Disponibilité</strong><br>
+                            Ouvert aux nouveaux projets
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="#" class="social-link">💼</a>
+                    <a href="#" class="social-link">🐙</a>
+                    <a href="#" class="social-link">🐦</a>
+                    <a href="#" class="social-link">📸</a>
+                </div>
+                <p>&copy; 2025 Bounyamine Ousmanou. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <button class="fab" onclick="scrollToTop()">↑</button>
+
+    <!-- Loader -->
+    <div id="loader" style="position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:var(--bg);z-index:2000;transition:opacity .5s;">
+      <div style="width:48px;height:48px;border:5px solid var(--primary);border-top:5px solid var(--accent);border-radius:50%;animation:spin 1s linear infinite;"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
